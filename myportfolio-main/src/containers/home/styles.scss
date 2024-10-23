@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.home {
+  font-family: 'Montserrat';
+  position: relative;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+
+    h1 {
+      color: rgb(67, 67, 67);
+      margin: 0;
+      font-weight: 500;
+      font-size: 4rem;
+      line-height: 10rem;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typingEffectAnimation 2.5s steps(20, end);
+    }
+  }
+
+  &__contact-me {
+    margin-top: 15px;
+
+    button {
+      cursor: pointer;
+      padding: 10px 40px;
+      font-size: 1.5rem;
+      background: transparent;
+      color: rgb(102, 101, 101);
+      border: 1.5px solid rgb(119, 119, 119);
+      border-radius: 4px;
+      font-weight: 500;
+
+      &:hover {
+        background: rgb(91, 91, 91);
+        color: #ffffff;
+        backdrop-filter: blur(50px); 
+      }
+      
+    }
+  }
+
+  &__social-icons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+  }
+
+  &__social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d7d7d7;
+    color: white;
+    transition: background-color 0.3s ease;
+    z-index: 2000 ; /*set the z index higher than the chatbot so that the social links stay functional*/
+  }
+
+  &__social-icons a:hover {
+    background-color: rgb(240, 240, 240);
+    color: #ffffff;
+  }
+
+  .chatbot-button-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    top: 73%;
+    left: 46%;
+
+    .chatbot-button {
+      width: 15%;
+      cursor: pointer;
+      padding: 15px 30px;
+      font-size: 1rem;
+      background-color: grayscale($color: #e2e2e2);
+      color: #484444;
+      border: none;
+      border-radius: 15px;
+      transition: all 0.6s ease;
+      left: 10%;
+
+      &:hover {
+        background: grayscale($color: #424242);
+        color: #cecece;
+        border: 1px solid rgba(245, 245, 245, 0.189);
+      }
+    }
+  }
+
+  .chatbot-container {
+    position: absolute;
+    top: 20%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+  .chatbot {
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    top: 60%;
+  }
+
+  .close-btn {
+    background: none;
+    border: 1px solid #666;
+    border-radius: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 10px;
+    color: #666
+  }
+
+  .messages {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+  }
+
+  .typing {
+    font-style: italic;
+    color: #666;
+  }
+
+  .send{
+    cursor: pointer;
+      padding:13px 30px;
+      font-size: 1rem;
+      background-color: #bebebe98;
+      color: #494545;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.6s ease;
+  }
+  .send:hover{
+      background: grayscale($color: #9d9d9d);
+      border: 1px solid rgba(245, 245, 245, 0.189);
+  }
+  .text{
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid  #94898962;
+    height: 40px;
+    
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  .home__text-wrapper h1 {
+    font-size: 2rem;
+    line-height: 5rem;
+  }
+  .chatbot-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .home__text-wrapper h1 {
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .home__text-wrapper h1 {
+    font-size: 4rem;
+    line-height: 8rem;
+  }
+}
+
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,163 @@
+
+.portfolio {
+  background-color: #ffffff;
+  background-attachment: scroll;
+  height: auto !important;
+
+  &__content {
+    padding: 20px;
+    width: 91%;
+
+    &__filter {
+      display: inline-block;
+      margin: 0 auto;
+      border-radius: 25px;
+      border: 1px dashed #676464;
+
+      li {
+        font-size: 16px;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        color: #565656;
+        text-transform: uppercase;
+        padding: 12px 20px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+
+        &.active {
+          background: #6a6a6fa5;
+          color: #f6f1f1;
+          font-weight: 600;
+          border-radius: 30px;
+        }
+      }
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      gap: 2rem;
+      margin-top: 10px;
+      border-radius: 30px; 
+
+      &__item {
+        height: 366px;
+        cursor: pointer;
+        position: relative;
+        border-radius: 50px; 
+        border: #5f5e5e dashed 1px;
+
+        &:hover .overlay {
+          opacity: 1;
+        }
+
+        &__img-wrapper {
+          height: 100%;
+
+          a {
+            height: 100%;
+
+            img {
+              height: inherit;
+              object-fit:scale-down;
+              width: 100%;
+              border-radius: 50px;
+            }
+          }
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background: rgb(255, 255, 255);
+          border-radius: 50px;
+          border: 1px dashed rgba(19, 19, 19, 0.384);
+
+          div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: right;
+
+            h1 {
+              color: linear-gradient(to right, #828181, #adadb6, #c3c3c3);
+              margin: 0px;
+              font-size: 2.5rem;
+              position: relative;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+
+            p {
+              color: linear-gradient(to right, #5f5e5e, #adadb6, #c3c3c3);;
+              margin: 0px;
+              font-size: 1rem;
+              position: relative;
+              overflow: hidden;
+              white-space: wrap;
+            }
+            
+            button {
+              cursor: pointer;
+              margin-top: 16px;
+              padding: 10px 70px;
+              font-size: 1.5rem;
+              background: rgba(205, 205, 205, 0.778);
+              color: #595656;
+              border: 1.5px solid #61616145;
+              border-radius: 4px;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .github-icon {
+          top: 5%;
+          left: -18%; 
+          position: absolute; 
+          color: rgb(100, 98, 98); 
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  
+  .portfolio__content__filter > li {
+    font-size: 11px;
+  }
+
+  .portfolio__content__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  
+  .portfolio__content__filter > li {
+    font-size: 14px;
+  }
+
+  .portfolio__content__cards {
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+      .overlay {
+        div > p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.resume{
+    font-family: 'Montserrat';
+    height: auto !important;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.timeline{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+
+    &__experience, &__education{
+        width: 48%;
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__header-text{
+            display: inline-block;
+            color:rgb(91, 91, 91);
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid rgb(123, 123, 123);
+        }
+
+        &__header-text::before , &__header-text::after{
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 5px;
+            background-color: rgb(142, 137, 137);
+            bottom: -1px;
+        }
+
+        &__header-text::before{
+            left: 0;
+        }
+
+        &__header-text::after{
+            right: 0;
+        }
+
+        &__vertical-timeline-element{
+            padding: 0px 0px 30px 0px;
+
+            &:last-child{
+                padding-bottom: 0px;
+            }
+        }
+        .vertical-timeline-element-title-wrapper{
+            display: flex;
+            align-items: center;
+
+            h3,h4{
+                font-size: 16px;
+                color: rgb(91, 91, 91);
+            }
+
+            h4{
+                margin-left: 8px;
+                color: rgb(91, 91, 91);
+            }
+
+
+        }
+
+        .vertical-timeline-element-title-wrapper-description{
+            font-size: 18px;
+        }
+
+        .vertical-timeline-element-content{
+            box-shadow: none;
+        }
+
+        .vertical-timeline-element-content-arrow{
+            display: none;
+        }
+
+        .vertical-timeline-element-date{
+            opacity: 1;
+            color:rgb(164, 158, 158);
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width : 768px){
+    .resume{
+        height:  auto !important;
+        overflow-x: hidden;
+    }
+    .timeline{
+        flex-direction: column;
+        &__experience, &__education{
+            width: 95%;
+            gap: 2rem;
+        }
+    }
+}

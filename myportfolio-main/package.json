@@ -1,0 +1,71 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "assert": "^2.1.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.1",
+    "nodemailer": "^6.9.15",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "rc-progress": "^3.2.4",
+    "react": "^16.9.0",
+    "react-dom": "^16.8.0",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-simple-animate": "^3.3.12",
+    "react-tsparticles": "^2.0.6",
+    "react-vertical-timeline-component": "^3.5.2",
+    "sass": "^1.50.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "tsparticles": "^2.0.6",
+    "url": "^0.11.4",
+    "util": "^0.12.5",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.95.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "buffer": "npm:buffer@^6.0.3",
+    "crypto": "npm:crypto-browserify@^3.12.1",
+    "crypto-random-string": "^5.0.0",
+    "http": "npm:stream-http@^3.2.0",
+    "https": "npm:http-browserify@^1.0.0",
+    "react-dev-utils": "12.0.1",
+    "rn-nodeify": "^10.3.0",
+    "stream": "npm:stream-browserify@^3.0.0",
+    "path":"npm:path-browserify@^1.0.1"
+  }
+}
