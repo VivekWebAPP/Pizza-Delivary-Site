@@ -3,7 +3,7 @@ import Context from './ContextState';
 
 const ContextProvider = (props) => {
     const sendEmail = async (name, to, subject) => {
-        const response = await fetch('http://your-backend-api.com/send-email', {
+        const response = await fetch('https://portfolio-gyhl.onrender.com/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
